@@ -1,0 +1,55 @@
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  padding-right: 2rem;
+}
+
+/* Space between icon and text */
+.p-menubar .p-menuitem-icon {
+  margin-right: 01rem; /* Adjust spacing here */
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+
+.p-menubar .p-menuitem-link {
+  padding: 01rem 1rem; /* space around items */
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.p-menubar .p-menuitem-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle hover */
+  border-radius: 0.5rem;
+}
+
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

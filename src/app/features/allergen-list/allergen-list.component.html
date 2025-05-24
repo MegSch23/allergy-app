@@ -1,0 +1,16 @@
+<p-autoComplete 
+  [(ngModel)]="allergenInput"
+  [suggestions]="filteredAllergens"
+  (completeMethod)="filterAllergens($event)"
+  (onSelect)="addAllergen($event.value)"
+  placeholder="Enter allergen">
+</p-autoComplete>
+
+<div *ngFor="let allergen of userAllergens">
+  <p-chip 
+    label="{{ allergen }}" 
+    removable="true" 
+    (onRemove)="removeAllergen(allergen)">
+  </p-chip>
+</div>
+

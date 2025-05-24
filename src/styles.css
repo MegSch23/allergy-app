@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-color: #0F766E;          /* Teal */
+  --primary-color-hover: #0D5C56;
+  --accent-color: #10B981;           /* Emerald */
+  --surface-color: #FFFFFF;
+  --background-color: #F9FAFB;
+  --text-color: #1F2937;             /* Slate-800 */
+
+  --font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,14 @@
+<!-- Search or Scan Section -->
+<p-autoComplete [(ngModel)]="selectedProduct" 
+                [suggestions]="filteredProducts" 
+                (completeMethod)="searchProducts($event)" 
+                placeholder="Search product">
+</p-autoComplete>
+
+<!-- Product Info -->
+<div *ngIf="selectedProduct">
+  <h3>{{ selectedProduct.name }}</h3>
+  <p>Ingredients: {{ selectedProduct.ingredients.join(', ') }}</p>
+  <p *ngIf="containsAllergen" style="color: red;">⚠️ Contains your allergens!</p>
+</div>
+

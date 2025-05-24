@@ -1,12 +1,29 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MenuItem, } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MenubarModule, RouterModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'allergy-app';
+  menuItems: MenuItem[] = [];
+
+  ngOnInit() {
+    this.menuItems = [
+      {
+        label: 'Scan Products',
+        icon: 'pi pi-barcode',
+        routerLink: ['/scan']
+      },
+      {
+        label: 'My Allergens',
+        icon: 'pi pi-list',
+        routerLink: ['/allergens']
+      }
+    ];
+  }
 }
